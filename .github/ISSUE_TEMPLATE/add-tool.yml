@@ -1,0 +1,43 @@
+name: Add or correct a tool
+description: Suggest a GEO tool, or fix a price or engine list we got wrong
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+    validations:
+      required: true
+  - type: input
+    id: engines
+    attributes:
+      label: Which AI engines does it track?
+      placeholder: ChatGPT, Perplexity, AI Overviews, Gemini
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: Cheapest paid monthly price, and what it includes
+      placeholder: $49 for 25 prompts
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Vendor page showing that price
+      description: Required for pricing. We do not take figures from comparison blogs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      options:
+        - label: This is my own tool
